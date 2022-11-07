@@ -69,8 +69,8 @@ var TYPESTEST_DIR = BUILD_DIR + "typestest/";
 var COMMON_WEB_FILES = ["web/images/*.{png,svg,gif,cur}", "web/debugger.js"];
 var MOZCENTRAL_DIFF_FILE = "mozcentral.diff";
 
-var REPO = "git@github.com:mozilla/pdf.js.git";
-var DIST_REPO_URL = "https://github.com/mozilla/pdfjs-dist";
+var REPO = "git@github.com:sitewaerts/pdf.js.git";
+var DIST_REPO_URL = "https://github.com/sitewaerts/pdfjs-dist";
 
 var builder = require("./external/builder/builder.js");
 
@@ -1675,7 +1675,7 @@ gulp.task(
 function packageBowerJson() {
   var VERSION = getVersionJSON().version;
 
-  var DIST_NAME = "pdfjs-dist";
+  var DIST_NAME = "@sitewaerts/pdfjs-dist";
   var DIST_DESCRIPTION = "Generic build of Mozilla's PDF.js library.";
   var DIST_KEYWORDS = ["Mozilla", "pdf", "pdf.js"];
   var DIST_HOMEPAGE = "http://mozilla.github.io/pdf.js/";
@@ -1875,7 +1875,7 @@ gulp.task(
     console.log();
     console.log("Done. Push with");
     console.log(
-      "  cd " + DIST_DIR + "; git push --tags " + DIST_REPO_URL + " master"
+      "  cd " + DIST_DIR + "; git push --tags " + DIST_REPO_URL + " main"
     );
     console.log();
     done();
